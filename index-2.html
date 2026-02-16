@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Instrumenten | Wat is leven zonder geluid</title>
+
+<meta name="description" content="Instrumenten - Een educatief platform voor muzikanten en audio professionals. Ontdek kunstzinnigheid, authenticiteit en uitmuntendheid in geluid.">
+
+<meta property="og:title" content="Instrumenten - Muzikale Uitmuntendheid">
+<meta property="og:description" content="Een cultuur van levenslang leren voor muzikanten en audio professionals.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1200&q=80">
+
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAmUlEQVR42mNkYGD4z0AEYBxVSFUB8T8GQkC0g0kYkJGR+Q8GhgYGBgYGhkYGBgY/xkYGBgY+P8PGBgYGP7/A8P//wMDAwMDw/8ZGBgYGPj/DxgYGBj4/w8YGBgY+P8PGBgYGPj/DxgYGBj4/w8YGBgY+P8PGBgYGPj/DxgYGBj4/w8YGBgY+P8PGBgYGPj/DxgYGBj4/w8YGBgY+P8PGBgYGAAAAAElFTkSuQmCC">
+
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+<style>
+:root{
+--black:#000;
+--gold:#D4AF37;
+--white:#fff;
+--taupe:#8B7355;
+--pearl:#F5F5F5;
+--bg:var(--pearl);
+--text:var(--black);
+--card:var(--white);
+--header-bg:rgba(255,255,255,.9);
+}
+
+[data-bs-theme="dark"]{
+--bg:#121212;
+--text:#F5F5F5;
+--card:#1e1e1e;
+--header-bg:rgba(0,0,0,.9);
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:var(--bg);
+color:var(--text);
+font-size:16px;
+line-height:1.6;
+scroll-behavior:smooth;
+}
+
+h1,h2,h3,.navbar-brand{
+font-family:'EB Garamond',serif;
+}
+
+h1{font-size:3rem;}
+h2{font-size:2rem;}
+
+.navbar{
+background:var(--header-bg);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(212,175,55,.2);
+z-index:1100;
+}
+
+.nav-link{
+color:var(--text)!important;
+}
+
+#hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url('https://images.unsplash.com/photo-1514119412350-e174d90d280e?auto=format&fit=crop&w=1920&q=80');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.glass{
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(10px);
+padding:3rem;
+border:1px solid rgba(212,175,55,.3);
+}
+
+.btn-gold{
+background:var(--gold);
+color:black;
+border:none;
+text-transform:uppercase;
+letter-spacing:1px;
+}
+
+.btn-gold:hover{
+background:var(--taupe);
+color:white;
+}
+
+.gallery-card{
+overflow:hidden;
+border:none;
+}
+
+.gallery-card img{
+height:300px;
+object-fit:cover;
+transition:.5s;
+}
+
+.gallery-card:hover img{
+transform:scale(1.1);
+}
+
+.reveal{
+opacity:0;
+transform:translateY(30px);
+transition:.8s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+footer{
+background:black;
+color:white;
+padding:3rem 0;
+}
+
+.social-icons a{
+color:var(--gold);
+font-size:1.5rem;
+margin:0 10px;
+}
+
+#backToTop{
+position:fixed;
+bottom:30px;
+right:30px;
+display:none;
+z-index:999;
+}
+
+#cookie{
+position:fixed;
+bottom:20px;
+left:20px;
+right:20px;
+background:var(--card);
+padding:20px;
+border:1px solid var(--gold);
+display:none;
+z-index:2000;
+}
+
+@media(max-width:768px){
+#hero{background-attachment:scroll;}
+}
+</style>
+</head>
+
+<body data-bs-theme="light">
+
+<header>
+<nav class="navbar navbar-expand-lg fixed-top" aria-label="Hoofdnavigatie">
+<div class="container">
+<a class="navbar-brand" href="#">INSTRUMENTEN</a>
+
+<div class="d-flex align-items-center">
+<button id="themeToggle" class="btn btn-link nav-link" aria-label="Toggle dark mode">
+<i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+</button>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<i class="bi bi-list fs-2"></i>
+</button>
+</div>
+
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#about">Over</a></li>
+<li class="nav-item"><a class="nav-link" href="#gallery">Galerij</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+
+<main>
+
+<section id="hero" aria-label="Introductie sectie">
+<div class="glass reveal">
+<h1>Instrumenten</h1>
+<p class="lead">Wat is leven zonder geluid</p>
+<a href="#about" class="btn btn-gold mt-3">Ontdek meer</a>
+</div>
+</section>
+
+<section id="about" class="py-5" aria-label="Over ons">
+<div class="container reveal text-center">
+<h2>Onze Missie</h2>
+<p class="fs-5">Wij creëren uitzonderlijke muzikale ervaringen voor muzikanten en audio professionals. Met kunstzinnigheid, authenticiteit en uitmuntendheid bouwen we aan een cultuur van levenslang leren en artistieke groei.</p>
+</div>
+</section>
+
+<section id="gallery" class="py-5 bg-light-subtle" aria-label="Fotogalerij">
+<div class="container">
+<h2 class="text-center mb-5 reveal">Galerij</h2>
+<div class="row g-4">
+
+<div class="col-md-4 reveal">
+<a href="https://images.unsplash.com/photo-1511379938547-c1f69419868d" class="glightbox">
+<div class="card gallery-card">
+<img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=600&q=80" alt="Piano studio" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400?text=Image+Placeholder'">
+</div>
+</a>
+</div>
+
+<div class="col-md-4 reveal">
+<a href="https://images.unsplash.com/photo-1465821185615-90d388592c9b" class="glightbox">
+<div class="card gallery-card">
+<img src="https://images.unsplash.com/photo-1465821185615-90d388592c9b?auto=format&fit=crop&w=600&q=80" alt="Gitaar" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400?text=Image+Placeholder'">
+</div>
+</a>
+</div>
+
+<div class="col-md-4 reveal">
+<a href="https://images.unsplash.com/photo-1510915361894-db8b60106cb1" class="glightbox">
+<div class="card gallery-card">
+<img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=600&q=80" alt="Mengpaneel" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400?text=Image+Placeholder'">
+</div>
+</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="py-5 text-center" style="background:var(--gold);color:black;">
+<div class="container reveal">
+<h2>Klaar om je geluid te vinden?</h2>
+<a href="#contact" class="btn btn-dark mt-3">Contacteer Ons</a>
+</div>
+</section>
+
+<section id="contact" class="py-5">
+<div class="container reveal">
+<h2>Contact</h2>
+<p>Muziekstraat 123, Brussel<br>info@instrumenten.be</p>
+
+<div class="ratio ratio-16x9 mt-4">
+<iframe loading="lazy" src="https://www.google.com/maps?q=Brussel&output=embed"></iframe>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer class="text-center">
+<div class="social-icons mb-3">
+<a href="#"><i class="bi bi-facebook"></i></a>
+<a href="#"><i class="bi bi-instagram"></i></a>
+<a href="#"><i class="bi bi-youtube"></i></a>
+</div>
+<p>&copy; 2026 Instrumenten</p>
+</footer>
+
+<button id="backToTop" class="btn btn-gold rounded-circle">
+<i class="bi bi-arrow-up"></i>
+</button>
+
+<div id="cookie">
+<div class="d-md-flex justify-content-between">
+<p>Wij gebruiken technische cookies.</p>
+<button id="accept" class="btn btn-gold btn-sm">Accepteren</button>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+
+const body=document.body;
+const toggle=document.getElementById("themeToggle");
+const icon=document.getElementById("themeIcon");
+const back=document.getElementById("backToTop");
+const cookie=document.getElementById("cookie");
+const accept=document.getElementById("accept");
+
+const setTheme=t=>{
+body.setAttribute("data-bs-theme",t);
+icon.className=t==="dark"?"bi bi-sun-fill":"bi bi-moon-stars-fill";
+localStorage.setItem("theme",t);
+};
+
+setTheme(localStorage.getItem("theme")||"light");
+
+toggle?.addEventListener("click",()=>{
+const current=body.getAttribute("data-bs-theme");
+setTheme(current==="dark"?"light":"dark");
+});
+
+if(!localStorage.getItem("cookieAccepted")){
+cookie.style.display="block";
+}
+
+accept?.addEventListener("click",()=>{
+localStorage.setItem("cookieAccepted","true");
+cookie.style.display="none";
+});
+
+window.addEventListener("scroll",()=>{
+back.style.display=window.scrollY>300?"block":"none";
+});
+
+back?.addEventListener("click",()=>{
+window.scrollTo({top:0,behavior:"smooth"});
+});
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("active");
+}
+});
+},{threshold:.2});
+
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+if(typeof GLightbox!=="undefined"){
+GLightbox({selector:".glightbox"});
+}
+
+});
+</script>
+
+</body>
+</html>
